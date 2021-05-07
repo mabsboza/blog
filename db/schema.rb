@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_05_020140) do
+ActiveRecord::Schema.define(version: 2021_05_07_053945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,11 +27,14 @@ ActiveRecord::Schema.define(version: 2021_05_05_020140) do
     t.index ["reset_password_token"], name: "index_authors_on_reset_password_token", unique: true
   end
 
-  create_table "gossips", force: :cascade do |t|
-    t.string "title", null: false, comment: "title"
-    t.text "content", null: false, comment: "content"
+  create_table "elements", force: :cascade do |t|
+    t.string "element_type"
+    t.text "content"
+    t.bigint "post_id", null: false
+    t.string "position_integer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_elements_on_post_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -45,5 +48,6 @@ ActiveRecord::Schema.define(version: 2021_05_05_020140) do
     t.index ["author_id"], name: "index_posts_on_author_id"
   end
 
+  add_foreign_key "elements", "posts"
   add_foreign_key "posts", "authors"
 end
