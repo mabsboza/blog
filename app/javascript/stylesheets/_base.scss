@@ -11,6 +11,10 @@
     img {
       max-width: 80%;
     }
+    .delete-btn {
+      position: absolute;
+      right: calc(10% + 38px)
+    }
   }
   .post-card {
     .header-image {
@@ -20,4 +24,5 @@
       background-position: center; 
     }
   }
+
 }
