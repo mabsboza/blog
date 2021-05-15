@@ -14,6 +14,8 @@ import 'trix/dist/trix.css';
 require("trix")
 require("@rails/actiontext")
 
+import '../stylesheets/application';
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
@@ -38,3 +40,4 @@ document.addEventListener('turbolinks:load', () => {
     element.previousElementSibling.classList.remove('d-none')
   })
 })
+import "controllers"
