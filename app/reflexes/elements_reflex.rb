@@ -6,5 +6,7 @@ class ElementsReflex < ApplicationReflex
       element_record = Element.where(id: element['id'])
       element_record.update(position_integer: element['position'])
     end
+    # Hack
+    @halted = true
   end
 end
