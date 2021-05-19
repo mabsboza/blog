@@ -16,6 +16,7 @@ require("@rails/actiontext")
 
 import '../stylesheets/application';
 import "@fortawesome/fontawesome-free/js/all";
+import Sortable from 'sortablejs';
 
 Rails.start()
 Turbolinks.start()
@@ -40,5 +41,7 @@ document.addEventListener('turbolinks:load', () => {
     element.classList.add('d-none')
     element.previousElementSibling.classList.remove('d-none')
   })
+  let element = document.getElementById(elements)
+  Sortable.create(elements, { animation: 150 })
 })
 import "controllers"
