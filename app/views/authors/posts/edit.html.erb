@@ -84,9 +84,9 @@
                         Click to add new content
                       <% end %>
                     </div>
-                    <div class='paragraph-form d-none'>
-                      <%= form_with(model: [@post, element]) do |form| %>
-                        <%= form.rich_text_area :content , class: 'form-control'%>
+                    <div class='paragraph-form d-none' id='element-<%= element.id %>-form'>
+                      <%= form_with(model: [@post, element], local: false) do |form| %>
+                        <%= form.rich_text_area :content, id: "element_content_#{element.id}"%>
                         <div class='mt-3 d-flex justify-content-between'>
                           <div>
                             <%= form.submit 'save', class: 'btn btn-primary'%>

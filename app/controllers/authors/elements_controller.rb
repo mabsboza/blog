@@ -16,13 +16,14 @@ module Authors
       redirect_to edit_post_path(@post), notice: notice
     end
 
-  # PATCH/PUT /element/1
+  # PATCH/PUT /elements/1
     def update
-      if @element.update(element_params)
-        redirect_to edit_post_path(@post), notice: 'Element was successfully updated.'
-      else
-        render :edit
-      end
+      @element.update(element_params)
+      # if @element.update(element_params)
+      # redirect_to edit_post_path(@post)
+      # else
+      #   render :edit
+      # end
     end
 
     # DELETE /elements/1
