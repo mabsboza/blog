@@ -28,6 +28,8 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 gem 'font-awesome-sass'
+gem 'friendly_id', '~> 5.4.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -44,7 +46,6 @@ group :development do
   gem 'spring'
   gem 'pry-rails'
   gem 'annotate'
-  gem 'friendly_id', '~> 5.4.0'
 end
 
 group :test do

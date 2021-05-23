@@ -93,7 +93,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.10.0)
-    ffi (1.15.0)
+    ffi (1.15.1)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     friendly_id (5.4.2)
