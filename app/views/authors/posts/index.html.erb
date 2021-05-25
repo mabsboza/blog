@@ -15,12 +15,14 @@
           </div>
           <div class='col-md-10'>
             <% if post.published? %>
-              <span style='badge badge-secondary'>
+              <span class="btn-info btn-sm">
                 <b>Published</b>
-              </span>
+              </span>&nbsp;
               <%= time_ago_in_words(post.published_at)%> ago
             <% else %>
-              <b>Unpublished</b>
+              <span class="btn-warning btn-sm">
+                <b>Unpublished</b>
+              </span>&nbsp;
             <% end %>
             <h5 class='card-title mb-1 text-dark'><%= post.title %></h5>
             <p class='text-secondary mb-0'><%= post.description %></p>
