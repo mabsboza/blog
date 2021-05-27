@@ -1,0 +1,18 @@
+<div class='row'>
+  <div class='col-lg-10 offset-lg-1'>
+    <div class='card post-card mb-5'>
+      <div class='header-image' style='background-image: url(<%= rails_blob_url(@post.header_image) %>)'>
+      </div>
+      <div class="card-body d-flex flex-column">
+        <h1 class='card-title mb-5'><%= @post.title %></h1>
+        <% @post.elements.each do |element| %>
+          <% if element.image? %>
+            <%= image_tag(element.image) %>
+          <% else %>
+            <%= element.content %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

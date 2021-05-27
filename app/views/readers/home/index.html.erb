@@ -10,7 +10,7 @@
             <h5 class='card-title'><%= post.title %></h5>
             <p class='text-secondary mb-0'><%= truncate(post.description, length: 200) %></p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            <a href="#" class="btn btn-primary mt-auto">Read More</a>
+            <%= link_to "Read Post", blog_post_path(post), class:"btn btn-primary mt-auto"%>
           </div>
         </div>
       </div>
